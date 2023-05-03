@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>SW2</title>
+</head>
+<body>
+	<h1>Time Converter</h1><br><hr>
+	<h4>Seconds Converter</h4>
+	<input type="text" id="id1" placeholder="Input in Secs"><br>
+	<input type="submit" value="To Mins" onclick="SecsToMins()"><br>
+	<input type="submit" value="To Hours" onclick="SecsToHours()"><br>
+	<input type="submit" value="To Days" onclick="SecsToDays()"><br>
+	<hr>
+	<h4>Minutes Converter</h4>
+	<input type="text" id="id2" placeholder="Input in Mins"><br>
+	<input type="submit" value="To Secs" onclick="MinsToSecs()"><br>
+	<input type="submit" value="To Hours" onclick="MinsToHours()"><br>
+	<input type="submit" value="To Days" onclick="MinsToDays()"><br>
+	<hr>
+	<h4>Hours Converter</h4>
+	<input type="text" id="id3" placeholder="Input in Hours"><br>
+	<input type="submit" value="To Secs" onclick="HoursToSecs()"><br>
+	<input type="submit" value="To Mins" onclick="HoursToMins()"><br>
+	<input type="submit" value="To Days" onclick="HoursToDays()"><br>
+	<hr>
+	<h4>Days Converter</h4>
+	<input type="text" id="id4" placeholder="Input in Days"><br>
+	<input type="submit" value="To Secs" onclick="DaysToSecs()"><br>
+	<input type="submit" value="To Mins" onclick="DaysToMins()"><br>
+	<input type="submit" value="To Hours" onclick="DaysToHours()"><br>
+	<p id="answer"></p>
+	<script>
+		//Seconds
+		function SecsToMins() {
+			var num1 = document.getElementById('id1').value;
+			var num2 = 60;
+			var answer = num1 / num2;
+			document.getElementById('answer').innerHTML = answer + "mins";
+		}
+		function SecsToHours() {
+			var num1 = document.getElementById('id1').value;
+			var num2 = 3600;
+			var answer = num1 / num2;
+			document.getElementById('answer').innerHTML = answer + "hrs";
+		}
+		function SecsToDays() {
+			var num1 = document.getElementById('id1').value;
+			var num2 = 86400;
+			var answer = num1 / num2;
+			document.getElementById('answer').innerHTML = answer + "ds";
+		}
+		//Minutes
+		function MinsToSecs() {
+			var num1 = document.getElementById('id2').value;
+			var num2 = 60;
+			var answer = num1 * num2;
+			document.getElementById('answer').innerHTML = answer + "secs";
+		}
+		function MinsToHours() {
+			var num1 = document.getElementById('id2').value;
+			var num2 = 60;
+			var answer = num1 / num2;
+			document.getElementById('answer').innerHTML = answer + "hrs";
+		}
+		function MinsToDays() {
+			var num1 = document.getElementById('id2').value;
+			var num2 = 1440;
+			var answer = num1 / num2;
+			document.getElementById('answer').innerHTML = answer + "ds";
+		}
+		//Hours
+		function HoursToSecs() {
+			var num1 = document.getElementById('id3').value;
+			var num2 = 3600;
+			var answer = num1 * num2;
+			document.getElementById('answer').innerHTML = answer + "secs";
+		}
+		function HoursToMins() {
+			var num1 = document.getElementById('id3').value;
+			var num2 = 60;
+			var answer = num1 * num2;
+			document.getElementById('answer').innerHTML = answer + "mins";
+		}
+		function HoursToDays() {
+			var num1 = document.getElementById('id3').value;
+			var num2 = 24;
+			var answer = num1 / num2;
+			document.getElementById('answer').innerHTML = answer + "ds";
+		}
+		//Days
+		function DaysToSecs() {
+			var num1 = document.getElementById('id4').value;
+			var num2 = 86400;
+			var answer = num1 * num2;
+			document.getElementById('answer').innerHTML = answer + "secs";
+		}
+		function DaysToMins() {
+			var num1 = document.getElementById('id4').value;
+			var num2 = 1400;
+			var answer = num1 * num2;
+			document.getElementById('answer').innerHTML = answer + "mins";
+		}
+		function DaysToHours() {
+			var num1 = document.getElementById('id4').value;
+			var num2 = 24;
+			var answer = num1 * num2;
+			document.getElementById('answer').innerHTML = answer + "hrs";
+		}
+	</script>
+</body>
+</html>
